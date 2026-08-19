@@ -91,7 +91,7 @@ kubectl version --client
 ````
 ### $\color{red} \textbf {Step 3 → IAM  Role  for  EC2}$
 create role:
-![role](./.Images/IAM_Role_1.png)
+![role](./.Images/⁮IAM_Role_1.png)
 
 ### $\color{red} \textbf {Step 4 →Attach  IAM  role  with your  EC2 }$
 go to EC2 
@@ -114,6 +114,28 @@ cd EKS-TF
 vim backend.tf
 ````
 ![backend tf](./.Images/change_region_backend_file.png)
+
+$\color{blue} \textbf {Configure AWS CLI:}$
+For configuring AWS CLI, you need to have AWS Access Key ID and AWS Secret Access Key. You can create a new IAM user in the AWS Management Console and generate these credentials. Once you have them, run the following command to configure your AWS CLI:
+Enter:
+AWS Access Key ID
+AWS Secret Access Key
+Default region: (e.g., ap-south-1)
+Output format: (json)
+That will create the eks profile.
+````
+aws configure
+````
+````
+aws configure --profile eks
+````
+
+$\color{blue} \textbf {Verify Profile Exists:}$
+`````
+cat ~/.aws/config
+cat ~/.aws/credentials
+`````
+
 
 $\color{blue} \textbf {Create \ Infra:}$
 ````
