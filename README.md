@@ -18,7 +18,7 @@ Step 6 → Creation of deployment and service for EKS
 
 ### $\color{red} \textbf {Step 1 → Login  and  basics  setup}$
 1. Click on launch Instance
-  ![instance](./.Images/navigate_to_ins_create.png)
+  ![instance](./.Images/EC2_Instance.png)
 2. Connect to EC2-Instance
 
    
@@ -104,7 +104,7 @@ click on actions → security → modify IAM role option
 ### $\color{red} \textbf {Step 5 → Building Infrastructure  Using  terraform}$
 $\color{blue} \textbf {Install  GIT}$
 ````
-git clone https://github.com/mukunddeotale49-bit/Project-Super-Mario.git
+git clone https://github.com/koparepooja/Project-Super-Mario.git
 ````
 ````
 cd Project-Super-Mario
@@ -121,7 +121,7 @@ terraform init
 terraform plan
 terraform apply --auto-approve
 ````
-
+![S3 Bucket](./.Images/S3_bucket.png)
 ````
 aws eks update-kubeconfig --name EKS_CLOUD --region ap-south-1 --profile eks
 ````
@@ -149,7 +149,7 @@ copy the load balancer ingress and paste it on browser and your game is running
 
 $\color{green} \textbf {Final Output: Enjoy The Game 🎮}$
 
-![output](./.Images/demo_image_final.png)
+![output](./.Images/Output_result.png)
 
 navigate to EKS-TF dir to delete infra 
 ```bash
